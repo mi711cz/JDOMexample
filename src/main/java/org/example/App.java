@@ -31,6 +31,8 @@ public class App
                     Element eElement = (Element) nNode;
                     System.out.println("Student roll no : "
                             + eElement.getAttribute("rollno"));
+                    System.out.println("Student entry : "
+                            + eElement.getAttribute("entry"));
                     System.out.println("First Name : "
                             + eElement
                             .getElementsByTagName("firstname")
@@ -49,6 +51,11 @@ public class App
                     System.out.println("Marks : "
                             + eElement
                             .getElementsByTagName("marks")
+                            .item(0)
+                            .getTextContent());
+                    System.out.println("Birthday : "
+                            + eElement
+                            .getElementsByTagName("birthday")
                             .item(0)
                             .getTextContent());
                 }
