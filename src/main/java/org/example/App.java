@@ -57,9 +57,8 @@ public class App
     public static void writeXMLFile() {
         File outputFile = new File("output.xml");
         DocumentBuilderFactory dbFactory2 = DocumentBuilderFactory.newInstance();
-        DocumentBuilder outBuilder = null;
         try {
-            outBuilder = dbFactory2.newDocumentBuilder();
+            DocumentBuilder outBuilder = dbFactory2.newDocumentBuilder();
             Document outDoc = outBuilder.newDocument();
 
             Element root = outDoc.createElement("StudenList");
@@ -71,8 +70,8 @@ public class App
             Text idValue = outDoc.createTextNode("444");
             studentID.appendChild(idValue);
             Element studentBirthday = outDoc.createElement("studentBirthday");
-            Text birhtdayValue = outDoc.createTextNode("01/01/1980");
-            studentBirthday.appendChild(birhtdayValue);
+            Text birthdayValue = outDoc.createTextNode("01/01/1980");
+            studentBirthday.appendChild(birthdayValue);
             student.appendChild(studentName);
             student.appendChild(studentID);
             student.appendChild(studentBirthday);
