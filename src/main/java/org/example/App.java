@@ -60,25 +60,46 @@ public class App
         try {
             DocumentBuilder outBuilder = dbFactory2.newDocumentBuilder();
             Document outDoc = outBuilder.newDocument();
-
-            Element root = outDoc.createElement("StudenList");
+            // create root node
+            Element root = outDoc.createElement("StudentList");
+            // create student element
             Element student = outDoc.createElement("student");
+            // create parent element
+            Element parent = outDoc.createElement("parent");
+
+            // create tag
             Element studentName = outDoc.createElement("studentName");
             Text nameValue = outDoc.createTextNode("Demo");
             studentName.appendChild(nameValue);
+            // create tag
             Element studentID = outDoc.createElement("studentID");
             Text idValue = outDoc.createTextNode("444");
             studentID.appendChild(idValue);
+            // create tag
             Element studentBirthday = outDoc.createElement("studentBirthday");
             Text birthdayValue = outDoc.createTextNode("01/01/1980");
             studentBirthday.appendChild(birthdayValue);
+            // create tag
+            Element parentName = outDoc.createElement("parentName");
+            Text parentValue = outDoc.createTextNode("Carl");
+            parentName.appendChild(parentValue);
+            // add student tags to studentList root
             student.appendChild(studentName);
             student.appendChild(studentID);
             student.appendChild(studentBirthday);
+            // add parent tags to studentList root
+            parent.appendChild(parentName);
+
             root.appendChild(student);
+            root.appendChild(parent);
+            // add root (studentList) to document/XML
             outDoc.appendChild(root);
+            // write from memory
+            // create nguon data
             DOMSource source = new DOMSource(outDoc);
+            // create result stream
             Result result = new StreamResult(outputFile);
+            // ...
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
