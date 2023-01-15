@@ -1,25 +1,25 @@
 <?xml version = "1.0"?>
 <class>
    <student rollno = "393" entry = "01/01/2022">
-      <firstname>dinkar</firstname>
-      <lastname>kad</lastname>
-      <nickname>dinkar</nickname>
+      <firstname>Peter</firstname>
+      <lastname>Müller</lastname>
+      <nickname>pmeuele</nickname>
       <marks>85</marks>
       <birthday>01/01/1990</birthday>
    </student>
    
    <student rollno = "493" entry = "01/01/2022">
-      <firstname>Vaneet</firstname>
-      <lastname>Gupta</lastname>
-      <nickname>vinni</nickname>
+      <firstname>Max</firstname>
+      <lastname>Mustermann</lastname>
+      <nickname>mmusterman</nickname>
       <marks>95</marks>
       <birthday>01/01/1990</birthday>
    </student>
    
    <student rollno = "593" entry = "01/01/2022">
-      <firstname>jasvir</firstname>
-      <lastname>singn</lastname>
-      <nickname>jazz</nickname>
+      <firstname>John</firstname>
+      <lastname>Rambo</lastname>
+      <nickname>jramb</nickname>
       <marks>90</marks>
 
    </student>

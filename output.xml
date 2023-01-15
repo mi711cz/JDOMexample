@@ -4,8 +4,8 @@
         <studentName>Demo</studentName>
         <studentID>444</studentID>
         <studentBirthday>01/01/1980</studentBirthday>
+        <parent>
+            <parentName>Carl</parentName>
+        </parent>
     </student>
-    <parent>
-        <parentName>Carl</parentName>
-    </parent>
 </StudentList>

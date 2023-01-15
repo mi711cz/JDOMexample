@@ -54,6 +54,7 @@ public class App
     }
 
 
+    @SuppressWarnings("SpellCheckingInspection")
     public static void writeXMLFile() {
         File outputFile = new File("output.xml");
         DocumentBuilderFactory dbFactory2 = DocumentBuilderFactory.newInstance();
@@ -83,6 +84,7 @@ public class App
             Element parentName = outDoc.createElement("parentName");
             Text parentValue = outDoc.createTextNode("Carl");
             parentName.appendChild(parentValue);
+
             // add student tags to studentList root
             student.appendChild(studentName);
             student.appendChild(studentID);
@@ -92,6 +94,8 @@ public class App
 
             root.appendChild(student);
             root.appendChild(parent);
+            student.appendChild(parent);
+
             // add root (studentList) to document/XML
             outDoc.appendChild(root);
             // write from memory
@@ -106,11 +110,7 @@ public class App
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
             System.out.println("End ...");
-        } catch (ParserConfigurationException e) {
-            throw new RuntimeException(e);
-        } catch (TransformerConfigurationException e) {
-            throw new RuntimeException(e);
-        } catch (TransformerException e) {
+        } catch (ParserConfigurationException | TransformerException e) {
             throw new RuntimeException(e);
         }
 
