@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<StudenList>
+    <student>
+        <studentName>Demo</studentName>
+        <studentID>444</studentID>
+        <studentBirthday>01/01/1980</studentBirthday>
+    </student>
+</StudenList>
