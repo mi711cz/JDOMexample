@@ -106,7 +106,9 @@ public class App
             // ...
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
+            // create XML Header
             transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+            // create XML with break lines
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
             System.out.println("End ...");
